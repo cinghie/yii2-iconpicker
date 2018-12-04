@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * @copyright Copyright &copy; Gogodigital Srls
+ * @company Gogodigital Srls - Wide ICT Solutions
+ * @website http://www.gogodigital.it
+ * @github https://github.com/cinghie/yii2-menu
+ * @forked https://github.com/Insolita/yii2-iconpicker
+ * @license GNU GENERAL PUBLIC LICENSE VERSION 3
+ * @package yii2-iconpicker
+ * @version 3.0.1
+ */
+
 namespace cinghie\iconpicker;
 
 use yii\helpers\ArrayHelper;
@@ -7,9 +18,12 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\JsExpression;
 use yii\widgets\InputWidget;
+use yii\i18n\PhpMessageSource;
 
 /**
  * widget for http://victor-valencia.github.io/bootstrap-iconpicker/
+ *
+ * @property array $defaultOptions
  */
 class Iconpicker extends InputWidget
 {
@@ -102,11 +116,11 @@ class Iconpicker extends InputWidget
         if (!isset(\Yii::$app->i18n->translations['insolita/iconpicker']) && !isset(\Yii::$app->i18n->translations['insolita/iconpicker/*']))
         {
             \Yii::$app->i18n->translations['insolita/iconpicker'] = [
-                'class'            => 'yii\i18n\PhpMessageSource',
-                'basePath'         => '@insolita/iconpicker/messages',
+                'class' => PhpMessageSource::class,
+                'basePath' => '@cinghie/iconpicker/messages',
                 'forceTranslation' => true,
-                'fileMap'          => [
-                    'insolita/iconpicker' => 'iconpicker.php',
+                'fileMap' => [
+                    'cinghie/iconpicker' => 'iconpicker.php',
                 ],
             ];
         }
@@ -137,7 +151,7 @@ JS;
                 ? $this->onSelectIconCallback->__toString()
                 : $this->onSelectIconCallback;
         }
-        $js[] = ($callback)
+        $js[] = $callback
             ? <<<JS
            $("#{$iconPickerId}").on('change', function(e) {
                 var callback = {$callback};
