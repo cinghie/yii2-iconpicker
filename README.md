@@ -77,9 +77,9 @@ Once the extension is installed, simply use it in your code by  :
         'name' => 'myicon',
         'value' => 'glyphicon-cog',
         'iconset' => 'fontawesome',  
-        'clientOptions' => [
-        	'placement' => 'bottom',
-            'search' => false
+        'clientOptions' => [  
+        	'placement' => 'bottom',  
+        	'search' => false
         ],
         'pickerOptions' => [
             'class'=>'btn btn-primary'
