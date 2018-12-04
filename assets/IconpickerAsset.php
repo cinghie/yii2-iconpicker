@@ -6,7 +6,7 @@
  * Time: 13:48
  */
 
-namespace insolita\iconpicker\assets;
+namespace cinghie\iconpicker\assets;
 
 use yii\helpers\ArrayHelper;
 use yii\web\AssetBundle;

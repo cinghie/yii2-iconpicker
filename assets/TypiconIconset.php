@@ -3,7 +3,7 @@
  * Created by solly [18.05.16 5:57]
  */
 
-namespace insolita\iconpicker\assets;
+namespace cinghie\iconpicker\assets;
 
 class TypiconIconset extends IconpickerAsset
 {
