@@ -23,7 +23,7 @@ composer require --prefer-dist  cinghie/yii2-iconpicker "^3.0.1"
 or add
 
 ```
-" cinghie/yii2-iconpicker": "^3.0.1"
+"cinghie/yii2-iconpicker": "^3.0.1"
 ```
 
 to the require section of your `composer.json` file.
@@ -33,14 +33,14 @@ Requirements
 This extension require twitter-bootstrap > 3.0  
 
 You can use it for:  
- - glyphicon  (with bootstrap 
- - ionicon       https://packagist.org/packages/rmrevin/yii2-ionicon
- - fontawesome   https://packagist.org/packages/rmrevin/yii2-fontawesome
- - weathericon   https://github.com/erikflowers/weather-icons
+ - glyphicon (with bootstrap) 
+ - ionicon https://packagist.org/packages/rmrevin/yii2-ionicon
+ - fontawesome https://packagist.org/packages/rmrevin/yii2-fontawesome
+ - weathericon https://github.com/erikflowers/weather-icons
  - mapicon
- - octicon        https://github.com/github/octicons
- - typicon        https://github.com/stephenhutchings/typicons.font
- - elusiveicon    https://github.com/reduxframework/elusive-icons
+ - octicon https://github.com/github/octicons
+ - typicon https://github.com/stephenhutchings/typicons.font
+ - elusiveicon https://github.com/reduxframework/elusive-icons
  - materialdesign https://packagist.org/packages/mervick/yii2-material-design-icons  
 
 By Default Fontawesome icons  
