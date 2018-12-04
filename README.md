@@ -5,9 +5,9 @@ Yii2 Widget for bootstrap-iconpicker plugin
 [![Total Downloads](https://img.shields.io/packagist/dt/cinghie/yii2-iconpicker.svg)](https://packagist.org/packages/cinghie/yii2-iconpicker)
 ![License](https://img.shields.io/packagist/l/cinghie/yii2-iconpicker.svg)
 
-Widget for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/
-Now based on more actual fork https://github.com/eliberty/bootstrap-iconpicker
-Forked from https://github.com/Insolita/yii2-iconpicker
+Widget for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/  
+Now based on more actual fork https://github.com/eliberty/bootstrap-iconpicker  
+Forked from https://github.com/Insolita/yii2-iconpicker  
 
 Installation
 ------------
