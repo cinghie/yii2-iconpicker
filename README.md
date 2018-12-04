@@ -2,8 +2,8 @@ Yii2 Widget for bootstrap-iconpicker plugin
 ===================================
 
 ![Latest Stable Version](https://img.shields.io/packagist/v/cinghie/yii2-iconpicker.svg)
-[![Total Downloads](https://img.shields.io/packagist/dt/ cinghie/yii2-iconpicker.svg)](https://packagist.org/packages/ cinghie/yii2-iconpicker)
-![License](https://img.shields.io/packagist/l/ cinghie/yii2-iconpicker.svg)
+[![Total Downloads](https://img.shields.io/packagist/dt/cinghie/yii2-iconpicker.svg)](https://packagist.org/packages/cinghie/yii2-iconpicker)
+![License](https://img.shields.io/packagist/l/cinghie/yii2-iconpicker.svg)
 
 Widget for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/
 
@@ -32,9 +32,10 @@ to the require section of your `composer.json` file.
 
 Requirements
 ------------
-This extension require twitter-bootstrap >3.0
-You can use it for 
- - glyphicon  (with bootstrap by default)
+This extension require twitter-bootstrap > 3.0  
+
+You can use it for:  
+ - glyphicon  (with bootstrap 
  - ionicon       https://packagist.org/packages/rmrevin/yii2-ionicon
  - fontawesome   https://packagist.org/packages/rmrevin/yii2-fontawesome
  - weathericon   https://github.com/erikflowers/weather-icons
@@ -42,9 +43,9 @@ You can use it for
  - octicon        https://github.com/github/octicons
  - typicon        https://github.com/stephenhutchings/typicons.font
  - elusiveicon    https://github.com/reduxframework/elusive-icons
- - materialdesign https://packagist.org/packages/mervick/yii2-material-design-icons
+ - materialdesign https://packagist.org/packages/mervick/yii2-material-design-icons  
 
-By default - native bootstrap glyphicon
+By Default Fontawesome icons  
 
 #### NOTE!
 
@@ -57,24 +58,32 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= $form->field($model, 'icon')->widget('\ cinghie\iconpicker\Iconpicker',
- [
-   'iconset'=>'fontawesome',
-   'clientOptions'=>['rows'=>8,'cols'=>10,'placement'=>'right'],
- ])->label('Choose icon'); ?>
- ```
+<?= $form->field($model, 'icon')->widget('\cinghie\iconpicker\Iconpicker', [
+    'iconset' => 'fontawesome',
+    'clientOptions' => [
+   	    'rows' => 8,  
+   	    'cols'=>10,  
+   	    'placement' => 'right'
+    ]
+])->label('Choose icon') ?>
+```
 
  or without ActiveForm
 
- ```php
- <?php
-    echo \ cinghie\iconpicker\Iconpicker::widget([
-        'id'=>'choose_icon',
-        'name'=>'myicon',
-        'value'=>'glyphicon-cog',
-        'iconset'=>'glyphicon',
-        'pickerOptions'=>['class'=>'btn btn-primary'],
-        'clientOptions'=>['placement'=>'bottom','search'=>false],
+```php
+<?php
+    echo \cinghie\iconpicker\Iconpicker::widget([
+        'id' => 'choose_icon',
+        'name' => 'myicon',
+        'value' => 'glyphicon-cog',
+        'iconset' => 'fontawesome',  
+        'clientOptions' => [
+        	'placement' => 'bottom',
+            'search' => false
+        ],
+        'pickerOptions' => [
+            'class'=>'btn btn-primary'
+        ]
     ]);
- ?>
- ```
+?>
+```
