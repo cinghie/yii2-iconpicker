@@ -1,6 +1,6 @@
 <?php
 
-namespace insolita\iconpicker;
+namespace cinghie\iconpicker;
 
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -17,7 +17,7 @@ class Iconpicker extends InputWidget
      * @var string $iconset - one of allowed variants
      * glyphicon|ionicon|fontawesome|weathericon|mapicon|octicon|typicon|elusiveicon|materialdesign
      */
-    public $iconset = 'glyphicon';
+    public $iconset = 'fontawesome';
     
     /**
      * @var array $pickerOptions additional html options for picker button
@@ -30,31 +30,29 @@ class Iconpicker extends InputWidget
     public $containerOptions = [];
     
     /**
-     * @var array $clientOptions - iconpicker options
-     * (will be merged with defaultOptions @see getDefaultOptions() , so you can set only overrides)
-     * @see       http://victor-valencia.github.io/bootstrap-iconpicker/
+     * @var array $clientOptions - iconpicker options (will be merged with defaultOptions @see getDefaultOptions(), so you can set only overrides)
+     * @see http://victor-valencia.github.io/bootstrap-iconpicker/
      **/
-    public $clientOptions
-        = [
-            'rows'            => 5,
-            'columns'         => 10,
-            'placement'       => 'right',
-            'align'           => 'center',
-            'arrowClass'      => 'btn-primary',
-            'header'          => true,
-            'footer'          => true,
-            'labelHeader'     => '{0} / {1}',
-            'labelFooter'     => '{0} - {1}:[{2}]',
-            'search'          => true,
-            'searchText'      => 'Search icon',
-            'selectedClass'   => 'btn-warning',
-            'unselectedClass' => 'btn-default',
-        ];
+    public $clientOptions = [
+		'rows'            => 5,
+		'columns'         => 10,
+		'placement'       => 'right',
+		'align'           => 'center',
+		'arrowClass'      => 'btn-primary',
+		'header'          => true,
+		'footer'          => true,
+		'labelHeader'     => '{0} / {1}',
+		'labelFooter'     => '{0} - {1}:[{2}]',
+		'search'          => true,
+		'searchText'      => 'Search icon',
+		'selectedClass'   => 'btn-warning',
+		'unselectedClass' => 'btn-default',
+    ];
     
     /**
      * @var JsExpression $onSelectIconCallback
      * @example
-     * onSelectIconCallback=>new JsExpression('function(e){
+     * onSelectIconCallback => new JsExpression('function(e){
      *    var icon = e.icon;
      *    icon = "some "+icon;
      *    $('#target').val(icon);
@@ -63,17 +61,17 @@ class Iconpicker extends InputWidget
     public $onSelectIconCallback;
     
     /**
-     * @var
+     * @var integer $internalId
      */
     private $internalId;
     
     /**
-     * @var string
+     * @var string $defaultIcon
      */
-    private $defaultIcon = 'fa-ellipsis-h';
+    private $defaultIcon = '';
     
     /**
-     *
+     * @inheritdoc
      */
     public function init()
     {
@@ -83,8 +81,8 @@ class Iconpicker extends InputWidget
         }
         parent::init();
         $this->internalId = $this->options['id'];
-        if ($this->hasModel() && !empty(Html::getAttributeValue($this->model, $this->attribute))) {
-            $this->defaultIcon = $this->pickerOptions['data-icon'] = Html::getAttributeValue($this->model, $this->attribute);
+        if ($this->hasModel() && !empty($this->model->{$this->attribute})) {
+            $this->defaultIcon = $this->pickerOptions['data-icon'] = $this->model->{$this->attribute};
         }
         if (!$this->hasModel() && !empty($this->value)) {
             $this->defaultIcon = $this->pickerOptions['data-icon'] = $this->value;
@@ -101,12 +99,8 @@ class Iconpicker extends InputWidget
      */
     public function registerTranslations()
     {
-        if (!isset(\Yii::$app->i18n->translations['insolita/iconpicker'])
-            && !isset
-            (
-                \Yii::$app->i18n->translations['insolita/iconpicker/*']
-            )
-        ) {
+        if (!isset(\Yii::$app->i18n->translations['insolita/iconpicker']) && !isset(\Yii::$app->i18n->translations['insolita/iconpicker/*']))
+        {
             \Yii::$app->i18n->translations['insolita/iconpicker'] = [
                 'class'            => 'yii\i18n\PhpMessageSource',
                 'basePath'         => '@insolita/iconpicker/messages',
@@ -129,8 +123,7 @@ class Iconpicker extends InputWidget
         $assetClass = 'insolita\\iconpicker\\assets\\' . ucfirst($this->iconset) . 'Iconset';
         $view->registerAssetBundle($assetClass);
         $this->clientOptions = ArrayHelper::merge(
-            $this->clientOptions,
-            [
+            $this->clientOptions, [
                 'icon' => $this->defaultIcon,
             ]
         );
@@ -157,7 +150,6 @@ JS
                 $('#$targetId').val(e.icon);
             });
 JS;
-        
         $view->registerJs(implode("\n", $js));
     }
     
@@ -166,12 +158,12 @@ JS;
      */
     public function run()
     {
-        
         if ($this->hasModel()) {
             $inp = Html::activeHiddenInput($this->model, $this->attribute, $this->options);
         } else {
             $inp = Html::hiddenInput($this->name, $this->value, $this->options);
         }
+
         $picker = Html::button(\Yii::t('insolita/iconpicker', 'CHOOSE_ICON'), $this->pickerOptions);
         
         return Html::tag('div', $picker . $inp, $this->containerOptions);
