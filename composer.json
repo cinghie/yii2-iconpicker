@@ -2,7 +2,7 @@
 	"name": "cinghie/yii2-iconpicker",
 	"description": "Yii2 Widget wrapper for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/",
 	"type": "yii2-extension",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"keywords": ["yii2","icons picker","icon picker","icons","picker","fontawesome","bootstrap","ionicon","glyphicon"],
 	"license": "MIT",
 	"authors": [
