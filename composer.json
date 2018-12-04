@@ -1,16 +1,17 @@
 {
-	"name": "insolita/yii2-iconpicker",
-	"description": "Widget for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/",
+	"name": "cinghie/yii2-iconpicker",
+	"description": "Yii2 Widget wrapper for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/",
 	"type": "yii2-extension",
 	"version": "3.0.0",
-	"keywords": ["yii2","fontawesome","icons","bootstrap","ionicon","glyphicon","picker"],
+	"keywords": ["yii2","icons picker","icon picker","icons","picker","fontawesome","bootstrap","ionicon","glyphicon"],
 	"license": "MIT",
 	"authors": [
-		{
-			"name": "insolita",
-			"email": "webmaster100500@ya.ru"
-		}
-	],
+        {
+            "name": "Gogodigital.it",
+            "email": "info@gogodigital.it",
+            "homepage": "http://www.gogodigital.it/"
+        }
+    ],
     "require": {
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
@@ -18,7 +19,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"insolita\\iconpicker\\": ""
+			"cinghie\\iconpicker\\": ""
 		}
 	}
 }
