@@ -6,10 +6,8 @@ Yii2 Widget for bootstrap-iconpicker plugin
 ![License](https://img.shields.io/packagist/l/cinghie/yii2-iconpicker.svg)
 
 Widget for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/
-
 Now based on more actual fork https://github.com/eliberty/bootstrap-iconpicker
-
-FontAwesome 4.7.0 support
+Forked from https://github.com/Insolita/yii2-iconpicker
 
 Installation
 ------------
