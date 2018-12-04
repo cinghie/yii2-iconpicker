@@ -1,9 +1,9 @@
-Widget for bootstrap-iconpicker 3.0
+Yii2 Widget for bootstrap-iconpicker plugin
 ===================================
 
-![Latest Stable Version](https://img.shields.io/packagist/v/insolita/yii2-iconpicker.svg)
-[![Total Downloads](https://img.shields.io/packagist/dt/insolita/yii2-iconpicker.svg)](https://packagist.org/packages/insolita/yii2-iconpicker)
-![License](https://img.shields.io/packagist/l/insolita/yii2-iconpicker.svg)
+![Latest Stable Version](https://img.shields.io/packagist/v/cinghie/yii2-iconpicker.svg)
+[![Total Downloads](https://img.shields.io/packagist/dt/ cinghie/yii2-iconpicker.svg)](https://packagist.org/packages/ cinghie/yii2-iconpicker)
+![License](https://img.shields.io/packagist/l/ cinghie/yii2-iconpicker.svg)
 
 Widget for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/
 
@@ -19,13 +19,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist insolita/yii2-iconpicker "^3.0"
+composer require --prefer-dist  cinghie/yii2-iconpicker "^3.0.1"
 ```
 
 or add
 
 ```
-"insolita/yii2-iconpicker": "^3.0"
+" cinghie/yii2-iconpicker": "^3.0.1"
 ```
 
 to the require section of your `composer.json` file.
@@ -57,7 +57,7 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= $form->field($model, 'icon')->widget('\insolita\iconpicker\Iconpicker',
+<?= $form->field($model, 'icon')->widget('\ cinghie\iconpicker\Iconpicker',
  [
    'iconset'=>'fontawesome',
    'clientOptions'=>['rows'=>8,'cols'=>10,'placement'=>'right'],
@@ -68,7 +68,7 @@ Once the extension is installed, simply use it in your code by  :
 
  ```php
  <?php
-    echo \insolita\iconpicker\Iconpicker::widget([
+    echo \ cinghie\iconpicker\Iconpicker::widget([
         'id'=>'choose_icon',
         'name'=>'myicon',
         'value'=>'glyphicon-cog',
