@@ -113,9 +113,9 @@ class Iconpicker extends InputWidget
      */
     public function registerTranslations()
     {
-        if (!isset(\Yii::$app->i18n->translations['insolita/iconpicker']) && !isset(\Yii::$app->i18n->translations['insolita/iconpicker/*']))
+        if (!isset(\Yii::$app->i18n->translations['cinghie/iconpicker']) && !isset(\Yii::$app->i18n->translations['cinghie/iconpicker/*']))
         {
-            \Yii::$app->i18n->translations['insolita/iconpicker'] = [
+            \Yii::$app->i18n->translations['cinghie/iconpicker'] = [
                 'class' => PhpMessageSource::class,
                 'basePath' => '@cinghie/iconpicker/messages',
                 'forceTranslation' => true,
@@ -134,7 +134,7 @@ class Iconpicker extends InputWidget
         $view = $this->getView();
         $targetId = $this->internalId;
         $iconPickerId = $this->pickerOptions['id'];
-        $assetClass = 'insolita\\iconpicker\\assets\\' . ucfirst($this->iconset) . 'Iconset';
+        $assetClass = 'cinghie\\iconpicker\\assets\\' . ucfirst($this->iconset) . 'Iconset';
         $view->registerAssetBundle($assetClass);
         $this->clientOptions = ArrayHelper::merge(
             $this->clientOptions, [
@@ -178,7 +178,7 @@ JS;
             $inp = Html::hiddenInput($this->name, $this->value, $this->options);
         }
 
-        $picker = Html::button(\Yii::t('insolita/iconpicker', 'CHOOSE_ICON'), $this->pickerOptions);
+        $picker = Html::button(\Yii::t('cinghie/iconpicker', 'CHOOSE_ICON'), $this->pickerOptions);
         
         return Html::tag('div', $picker . $inp, $this->containerOptions);
     }
@@ -202,7 +202,7 @@ JS;
             'labelHeader'     => '{0} / {1}',
             'labelFooter'     => '{0} - {1}:[{2}]',
             'search'          => true,
-            'searchText'      => \Yii::t('insolita/iconpicker', 'SEARCH_ICON'),
+            'searchText'      => \Yii::t('cinghie/iconpicker', 'SEARCH_ICON'),
             'selectedClass'   => 'btn-warning',
             'unselectedClass' => 'btn-default',
         ];
