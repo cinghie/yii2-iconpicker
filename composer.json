@@ -1,11 +1,11 @@
 {
-	"name": "cinghie/yii2-iconpicker",
-	"description": "Yii2 Widget wrapper for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/",
-	"type": "yii2-extension",
-	"version": "3.0.1",
-	"keywords": ["yii2","icons picker","icon picker","icons","picker","fontawesome","bootstrap","ionicon","glyphicon"],
-	"license": "MIT",
-	"authors": [
+    "name": "cinghie/yii2-iconpicker",
+    "description": "Yii2 Widget wrapper for bootstrap-iconpicker plugin http://victor-valencia.github.io/bootstrap-iconpicker/",
+    "type": "yii2-extension",
+    "version": "3.0.1",
+    "keywords": ["yii2","icons picker","icon picker","icons","picker","fontawesome","bootstrap","ionicon","glyphicon"],
+    "license": "MIT",
+    "authors": [
         {
             "name": "Gogodigital.it",
             "email": "info@gogodigital.it",
@@ -16,10 +16,10 @@
         "yiisoft/yii2": "^2.0.14",
         "yiisoft/yii2-bootstrap": "^2.0.7",
 		"bower-asset/eliberty-bootstrap-iconpicker": "^1.8.1"
-	},
-	"autoload": {
-		"psr-4": {
-			"cinghie\\iconpicker\\": ""
-		}
+    },
+    "autoload": {
+	"psr-4": {
+	    "cinghie\\iconpicker\\": ""
 	}
+    }
 }
