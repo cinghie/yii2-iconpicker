@@ -13,7 +13,6 @@
 
 namespace cinghie\iconpicker\assets;
 
-use yii\bootstrap\BootstrapPluginAsset;
 use yii\helpers\ArrayHelper;
 use yii\web\AssetBundle;
 use yii\web\YiiAsset;
@@ -26,7 +25,6 @@ class IconpickerAsset extends AssetBundle
     /** @var array */
     public $depends = [
 	    YiiAsset::class,
-	    BootstrapPluginAsset::class,
     ];
 
 	/**
